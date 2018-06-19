@@ -1,0 +1,27 @@
+.new-tweet {
+  background: #DCDCDC;
+  padding: 10px;
+  border-radius: 10px;
+
+}
+
+.new-tweet h2 {
+  border-bottom: 1px solid #586868;
+}
+
+.new-tweet textarea {
+  padding-left: 5px;
+  width: 100%;
+}
+
+.tweet-footer {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 0px;
+  padding-right: 0px;
+
+}
+
+.overlimit {
+  color: red;
+}
