@@ -1,9 +1,77 @@
-#tweet-container header {
-  background: #001f3f;
+.tweets {
+  background-color: white;
+  border: 1px solid #eee;
+  border-radius: 10px;
 }
 
+.tweet p {
+  border-bottom: 1px solid lightgrey;
+  background-color: white;
+  height: 90px;
+  padding-left: 10px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin-bottom: 0px;
+  margin-top: 5px;
+}
+
+.tweet header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 70px;
+  background-color: #eee;
+  border: 1px solid #eeeeee;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+}
+
+.tweet:hover header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 70px;
+  box-shadow: 0px 0px 6px 2px #D3D3D3;
+  background-color: #eee;
+  border: 1px solid #eeeeee;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.tweet .header-div {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.header-div span {
+  padding-left: 5px;
+}
 
 .tweet-logos {
-  height: 60px;
-
+  border-radius: 10px;
 }
+
+
+.tweet footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.icons {
+  display: none;
+  top: 10px;
+  right: 15px;
+}
+
+.tweet footer:hover > .icons {
+  display: block;
+}
+
