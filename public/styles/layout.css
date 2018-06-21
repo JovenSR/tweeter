@@ -32,6 +32,18 @@ body {
 
 }
 
+.alert-box {
+display: block !important;
+background-color: lightcoral ;
+border-radius: 10px;
+font-weight: bold ;
+margin-bottom: 10px;
+padding-left: 65px;
+padding-top: 5px;
+margin-top: 10px;
+
+}
+
 
 
 

@@ -54,12 +54,19 @@
 
 $(document).ready(function() {
 
+  function escape(str) {
+  var div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
   function createTweetElement(tweetObject) {
-  // let $tweet = $("<article>").addClass("tweet");
-  let $name = tweetObject["user"].name;
+
+  let $name = tweetObject.user.name;
   let $img = tweetObject["user"]["avatars"].small;
   let $tag = tweetObject["user"].handle;
   let $content = tweetObject["content"].text;
+  let validtweet = escape($content);
   let $time = Math.round(tweetObject["created_at"] / 86400000000);
 
 
@@ -73,7 +80,7 @@ $(document).ready(function() {
 
           <h4>${$tag}</h4>
           </header>
-          <p>${$content}</p>
+          <p>${validtweet}</p>
           <footer>
             <span class="timer">${$time} Days Ago</span>
             <div class = "icons">
@@ -88,16 +95,57 @@ $(document).ready(function() {
   $(".tweets").prepend(HTMlObj);
 
   }
+function formValidation(data) {
+  valid = true;
+  if(data.length === 5) {
+    valid = false;
+  } else {
+    return valid;
+  }
+}
+
 
   function renderTweet(tweets) {
     for(let tweet in tweets) {
+      console.log(tweets[tweet]);
       createTweetElement(tweets[tweet]);
     }
   }
 
 renderTweet(data);
-  //let $tweet = createTweetElement(tweetData);
-  //console.log($tweet);
+
+function loadTweets() {
+   $.ajax('/tweets').done(function(data){
+     $('#all-tweets').html('');
+     renderTweet(data);
+   })
+ }
+
+$('form').on('submit', function(e) {
+    e.preventDefault();
+
+    let data = $('form').serialize();
+    let valid = formValidation(data);
+    if(valid) {
+      $.ajax('/tweets', {
+      method: 'POST',
+      data: data
+    }).done(function() {
+      $('form textarea').val('');
+      loadTweets();
+
+    })
+    } else {
+      $('#alert').addClass('alert-box');
+      $('#alert').html("Invalid Tweet , Please Try Again");
+      $('#textarea').on('keypress' , function () {
+        $('#alert').removeClass('alert-box');
+        $('#alert').html("");
+      })
+
+    }
+
+  });
 
 })
 
