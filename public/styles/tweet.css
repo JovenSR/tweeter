@@ -1,7 +1,9 @@
-.tweets {
+.tweet {
   background-color: white;
   border: 1px solid #eee;
   border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .tweet p {
@@ -37,7 +39,7 @@
   padding-right: 5px;
   height: 70px;
   box-shadow: 0px 0px 6px 2px #D3D3D3;
-  background-color: #eee;
+  background-color: #DCDCDC;
   border: 1px solid #eeeeee;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -71,7 +73,7 @@
   right: 15px;
 }
 
-.tweet footer:hover > .icons {
+.tweet:hover footer .icons {
   display: block;
 }
 

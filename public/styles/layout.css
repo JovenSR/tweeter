@@ -22,12 +22,11 @@ body {
 }
 
 .container {
-  border: 1px solid black;
+  height: 100% !important ;
   width: 450px;
   margin: 0 auto;
   background-color: white;
-  margin-top: 140px;
-  height: 800px;
+  margin-top: 80px;
   align-content: center;
   padding: 40px;
 
