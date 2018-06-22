@@ -53,6 +53,7 @@
 
 
 $(document).ready(function() {
+  loadTweets();
   $(".new-tweet").slideToggle();
 
   function escape(str) {
