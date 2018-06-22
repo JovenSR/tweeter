@@ -53,6 +53,7 @@
 
 
 $(document).ready(function() {
+  $(".new-tweet").slideToggle();
 
   function escape(str) {
   var div = document.createElement('div');
@@ -146,6 +147,13 @@ $('form').on('submit', function(e) {
     }
 
   });
+
+$(".compose").click(function(){
+    $(".new-tweet").slideToggle();
+    $('#textarea').focus();
+});
+
+
 
 })
 
