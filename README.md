@@ -15,3 +15,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Screenshots
+
+!["Screenshot of tweets page"](https://github.com/JovenSR/tweeter/blob/master/docs/Screen%20Shot%202018-06-23%20at%2012.25.00%20AM.png?raw=true)
+
+!["Screenshot of compose tweet"](https://github.com/JovenSR/tweeter/blob/master/docs/Screen%20Shot%202018-06-23%20at%2012.32.45%20AM.png?raw=true)
