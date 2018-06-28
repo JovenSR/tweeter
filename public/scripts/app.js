@@ -93,7 +93,7 @@ $(document).ready(function() {
   }
 function formValidation(data) {
   valid = true;
-  if(data.length === 5) {
+  if(data.length === 5 || data.length >= 144) {
     valid = false;
   } else {
     return valid;
